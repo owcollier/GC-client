@@ -1,0 +1,775 @@
+/* font-face */
+
+/* @font-face {
+  font-family: "SharpSans-Bold";
+  src:  url("./assets/fonts/SharpSans-Bold.eot");
+  src:  url("./assets/fonts/SharpSans-Bold.woff2") format("woff2"),
+        url("./assets/fonts/SharpSans-Bold.woff") format("woff")
+}
+
+@font-face {
+  font-family: "SharpSans-Book";
+  src:  url("./assets/fonts/SharpSans-Book.eot");
+  src:  url("./assets/fonts/SharpSans-Book.woff2") format("woff2"),
+        url("./assets/fonts/SharpSans-Book.woff") format("woff")
+}
+
+@font-face {
+  font-family: "SharpSans-ExtraBold";
+  src:  url("./assets/fonts/SharpSans-ExtraBold.eot");
+  src:  url("./assets/fonts/SharpSans-ExtraBold.woff2") format("woff2"),
+        url("./assets/fonts/SharpSans-ExtraBold.woff") format("woff")
+}
+
+@font-face {
+  font-family: "SharpSans-Light";
+  src:  url("./assets/fonts/SharpSans-Light.eot");
+  src:  url("./assets/fonts/SharpSans-Light.woff2") format("woff2"),
+        url("./assets/fonts/SharpSans-Light.woff") format("woff")
+}
+
+@font-face {
+  font-family: "SharpSans-Medium";
+  src:  url("./assets/fonts/SharpSans-Medium.eot");
+  src:  url("./assets/fonts/SharpSans-Medium.woff2") format("woff2"),
+        url("./assets/fonts/SharpSans-Medium.woff") format("woff")
+}
+
+@font-face {
+  font-family: "SharpSans-Semibold";
+  src:  url("./assets/fonts/SharpSans-Semibold.eot");
+  src:  url("./assets/fonts/SharpSans-Semibold.woff2") format("woff2"),
+        url("./assets/fonts/SharpSans-Semibold.woff") format("woff")
+}
+
+@font-face {
+  font-family: "SharpSans-Thin";
+  src:  url("./assets/fonts/SharpSans-Thin.eot");
+  src:  url("./assets/fonts/SharpSans-Thin.woff2") format("woff2"),
+        url("./assets/fonts/SharpSans-Thin.woff") format("woff")
+} */
+
+/* globals */
+
+ html, body {
+  overflow-x: hidden;
+ }
+
+ body {
+  /* font-family: 'SharpSans-Semibold', Fallback, sans-serif; */
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5F259F;
+  background-color: #D0DF00;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+
+  /* font-family: "SharpSans-Book", Fallback, sans-serif; */
+
+  color: #5F259F;
+}
+
+a {
+  color: #5F259F;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+/* Hidden class for jQuery stuff */
+
+.hidden {
+  display: none;
+}
+
+/* carousel background */
+
+.carousel-item:nth-child(1) {
+  background: url(./assets/images/alexey-ruban-103990-unsplash_chartreuse.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.carousel-item:nth-child(2) {
+  background: url(./assets/images/alexis-brown-82988-unsplash_chartreuse.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.carousel-item:nth-child(3) {
+  background: url(./assets/images/jelleke-vanooteghem-554406-unsplash_chartreuse.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.carousel-item:nth-child(4) {
+  background: url(./assets/images/rawpixel-586684-unsplash_chartreuse.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.carousel-item:nth-child(5) {
+  background: url(./assets/images/stefan-stefancik-257625-unsplash_chartreuse.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.carousel {
+  z-index: -99;
+}
+
+.carousel .carousel-item {
+  position: fixed;
+  
+  width: 100%;
+  height: 100%;
+
+  max-width: 100%;
+}
+
+.carousel-item {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+
+/*
+ * Masthead for nav
+ */
+
+.site-masthead {
+  position: fixed;
+  top: -160px;
+
+  transition: top 0.5s ease-in-out;
+
+  width: 100%;
+  background-color: #5F259F;
+  color: #ffffff;
+  z-index: 2000;
+
+  padding: 1.5em 0;
+  /* -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+          box-shadow: inset 0 -2px 5px rgba(0,0,0,.1); */
+}
+
+.masthead-show {
+  top: 0;
+  transition: top 0.5s ease-in-out;
+}
+
+/* Masthead brand icon */
+
+.navbar-brand {
+  margin-right: 0;
+}
+
+.navbar-brand-logo {
+  height: 2.5em;
+}
+
+.navbar-brand-mobile {
+  display: none;
+}
+
+.navbar-brand-logo-mobile {
+  display: none;
+  height: 1em;
+}
+
+/* Masthead hamburger icon */
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-hamburger {
+  color: #ffffff;
+
+  height: 1.5em;
+
+  /* position: relative;
+  padding-left: 1.25em; */
+}
+
+
+/* Dropdown nav styles */
+
+.dropdown-nav-menu {
+  position: fixed;
+  top: -800px;
+
+  z-index: 2000;
+
+  font-size: 36px;
+
+  padding-top: 1em;
+
+  transition: top 0.5s ease-in-out;
+
+  background: #ffffff;
+  border-bottom: 1px solid #5F259F;
+}
+
+.dropdown-show {
+  transition: top 0.5s ease-in-out;
+  top: 0;
+}
+
+/* .dropdown-ul {
+  padding: 4em 1em;
+  margin: 0.5em 0;
+} */
+
+.dropdown-close {
+  height: 1.25em;
+}
+
+.dropdown-close-icon {
+  margin-left: 1em;
+}
+
+.dropdown-ul {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.dropdown-ul a {
+  transition: color 0.25s ease-in-out;
+}
+
+.dropdown-ul a:hover {
+  cursor: pointer;
+  color: #D0DF00 !important;
+}
+
+.dropdown-li {
+  list-style-type: none;
+}
+
+/*
+ * Site header tags and description in header
+ */
+
+.site-header-text {
+  padding-top: 3.5em;
+  padding-bottom: 7em;
+}
+
+.site-header-title {
+  margin-bottom: 0;
+  font-size: 60px;
+  line-height: 1;
+}
+
+.site-description {
+
+  /* font-family: "SharpSans-Book", Fallback, sans-serif; */
+  padding-top: 1em;
+  font-size: 36px;
+}
+
+/* 
+ * brand icon svg in header
+ */
+
+.header-image {
+
+  display: block;
+  margin: 16em auto 10em auto;
+
+  height: 40em;
+}
+
+
+/*
+ * Content sidebar
+ */
+
+/* #sidebar {
+  position: sticky;
+  top: 6em;
+} */
+
+.content-ul {
+
+  font-size: 24px;
+
+}
+
+.content-ul a {
+  transition: color 0.25s ease-in-out;
+}
+
+.content-ul a:hover {
+  cursor: pointer;
+  color: #ffffff !important;
+}
+
+.content-sidebar-list {
+  padding-top: 1em;
+}
+
+.sidebar-border {
+  border-top: 1px solid #ffffff;
+}
+
+.sidebar-focus {
+  color: #ffffff;
+}
+
+/* Main content column */
+
+.content-main {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.content-main > div:last-child {
+  margin-bottom: 6em;
+}
+
+.content-main-post {
+  font-size: 24px;
+  margin-bottom: 3em;
+  border-top: 1px solid #ffffff;
+
+  font-weight: 300;
+}
+
+.content-main-title {
+  margin-top: 0.5em;
+  font-size: 36px;
+}
+
+.content-main-container {
+  margin-top: 2em;
+}
+
+.ul-secondary li {
+  list-style: none;
+  padding-left: 1em;
+}
+
+/* Pseudo-footer */
+
+.pseudo-footer {
+  display: block;
+
+  width: 100%;
+  background-color: #D0DF00;
+
+  height: 21em;
+
+  margin-bottom: 1em;
+}
+
+.pseudo-footer-row {
+  padding-top: 2em;
+}
+
+.pseudo-footer-logo-column {
+  padding-top: 1em;
+}
+
+.bottom-logo {
+  height: 11em;
+
+  display: block;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pseudo-footer-contact-column {
+  color: #5F259F;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/*
+ * Footer
+ */
+
+.footer {
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  font-size: 18px;
+
+  width: 100%;
+
+  padding: 0.8em 0;
+
+  color: #5F259F;
+  background-color: #D0DF00;
+
+  border-top: 1px solid #ffffff;
+
+}
+
+.footer-row a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-subscribe-link {
+  margin-left: 0.5em;
+  padding: 4px 6px;
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+}
+
+
+
+/* custom media query styles */
+
+/* max-width media queries */
+
+/* Large devices (desktops, less than 1200px */
+
+@media (min-width: 1200px) {
+
+  .container {
+    max-width: 1400px;
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+
+  .pseudo-footer-contact-column-primary {
+    padding-left: 0;
+  }
+
+}
+
+/* For the MailChimp form */
+
+@media (max-width: 1199.98px) {
+
+  /* masthead */
+
+  .site-masthead {
+    top: 0;
+  }
+
+  .navbar-brand-logo {
+    height: 2em;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+
+
+  /* content section sidebar and main content column */
+
+  .content-ul {
+    display: none;
+  }
+
+  .content-main {
+    justify-content: center;
+  }
+
+  /* pseudo-footer font-size needs to decrease to avoid buggy line breaks */
+
+  .pseudo-footer-contact-column {
+    font-size: 16px;
+  }
+
+}
+
+ /* Medium devices (tablets, less than 992px) */
+
+@media (max-width: 991.98px) {
+
+  /* container max-width override */
+
+  .container {
+    max-width: 992px;
+  }
+
+  /* masthead brand logo size decreases */
+
+  .navbar-brand-logo {
+    height: 1.5em;
+  }
+
+  /* dropdown font-size decreases */
+
+  .dropdown-nav-menu {
+    font-size: 30px;
+  }
+
+  /* header logo size decreases */
+
+  .header-image {
+    height: 30em;
+  }
+
+  /* header text bottom padding decreases */
+
+  .site-header-text {
+    padding-bottom: 3em;
+    line-height: 1.25;
+  }
+
+  /* header text h2 font size decreases */
+
+  .site-header-title {
+    font-size: 48px;
+    line-height: 1.25;
+  }
+
+  /* header text paragraph font size decreases */
+
+  .site-description {
+    font-size: 24px;
+  }
+
+  /* footer font-size needs to decrease, size of container increased to correctly stack elements when needed */
+
+  .footer {
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width: 821.98px) {
+
+  .footer-opening {
+    min-height: 36px;
+  }
+
+  /* pseudo-footer bottom margin can go once footer becomes static, size will adjust slightly*/
+
+  .pseudo-footer {
+    height: 18em;
+    margin-bottom: 0;
+  }
+
+  /* footer no longer fixed */
+
+  .footer {
+    position: static;
+    height: 3.5em;
+  }
+
+}
+
+@media (max-width: 767.98px) {
+
+  .container {
+    max-width: 768px;
+  }
+
+  /* masthead scaling down */
+
+  .site-masthead {
+    padding: 1em 0;
+  }
+
+  .navbar-brand-logo {
+    height: 1.2em;
+  }
+  
+  .navbar-toggler {
+    font-size: 1rem;
+  }
+
+  /* dropdown nav menu font-size decreases */
+
+  .dropdown-nav-menu {
+    font-size: 24px;
+  }
+
+  /* header image size decreases */
+
+  .header-image {
+    height: 22em;
+  }
+
+  /* font sizes scaling in main content column */
+
+  .site-header-title {
+    font-size: 36px;
+  }
+
+  .site-description {
+    font-size: 20px;
+  }
+
+  .content-main-title {
+    font-size: 24px;
+  }
+
+  .content-main-post {
+    font-size: 18px;
+  }
+
+  /* pseudo footer content needs to scale down at this breakpoint */
+
+  .pseudo-footer {
+    height: 16em;
+  }
+
+  .bottom-logo {
+    height: 8em;
+  }
+
+  .pseudo-footer-contact-column {
+    font-size: 14px;
+  }
+
+  /* footer content *needs* to scale down at this breakpoint */
+
+  .footer {
+    font-size: 14px;
+    height: 5em;
+  }
+
+  .footer-row {
+    flex-direction: column;
+  }
+
+  .footer-opening {
+    min-height: 24px;
+  }
+
+}
+
+@media (max-width: 575.98px) {
+
+  .container {
+    max-width: 576px;
+  }
+
+  /* switching out larger masthead brand logo for smaller version */
+
+  .navbar-brand-large {
+    display: none;
+  }
+
+  .navbar-brand-logo {
+    display: none;
+  }
+
+  .navbar-brand-mobile {
+    display: block;
+  }
+
+  .navbar-brand-logo-mobile {
+    display: block;
+  }
+
+  /* hamburger icon scaling down */
+
+  .navbar-toggler-hamburger {
+    height: 1.25em;
+  }
+
+  /* dropdown margins, padding, and font-size decreases */
+
+  .dropdown-ul {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .dropdown-nav-menu {
+    font-size: 18px;
+    line-height: 2;
+  }
+
+  .dropdown-close-icon {
+    margin-left: auto;
+  }
+
+  /* header/hero logo's margins can decrease a bit */
+
+  .header-image {
+
+    margin: 12em auto 8em auto;
+
+  }
+
+  /* header/hero description title elements should scale to avoid line breaks on mobile screens */
+
+  .site-header-title {
+    font-size: 24px;
+  }
+
+  /* pseudo-footer line height needs to change */
+  .pseudo-footer-contact-column {
+    line-height: 1.25;
+  }
+
+}
+
+/* custom breakpoints for mobile, specifically content in footers */
+
+@media (max-width: 489.98px) {
+
+  /* pseudo-footer size must increase to accomodate new vertical layout for contact info content */
+
+  .pseudo-footer {
+    height: 18em;
+    
+  }
+
+  /* pseudo-footer content columns can now stack vertically */
+
+  .pseudo-footer-flex{
+    flex-direction: column;
+  }
+
+  /* pseudo-footer content columns can lose the padding on either side and a bottom padding is added for primary column */
+
+  .pseudo-footer-contact-column-primary {
+    padding-bottom: 9em;
+  }
+  
+  /* .pseudo-footer-contact-column-secondary {
+    padding-left: 0;
+  } */
+
+}
+
+@media (max-width: 406.98px) {
+
+  .footer {
+    height: 8em;
+  }
+
+  .footer-subscribe {
+    line-height: 2;
+  }
+
+  .footer-subscribe-link {
+    margin-left: 0;
+  }
+
+}
+
+@media (max-width: 374.98px) {
+
+  .dropdown-nav-menu {
+    font-size: 14px;
+  }
+
+}
