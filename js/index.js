@@ -19,19 +19,19 @@ const handleHeader = () => {
   }
 };
 
-// const handleResize = () => {
+const handleResize = () => {
 
-//   const scroll = $(this).scrollTop();
+  const scroll = $(this).scrollTop();
 
-//   if (scroll < $('#left').offset().top - 120) {
+  if (scroll < $('#left').offset().top - 120) {
 
-//     $('#sidebar').css({
-//       'position': 'absolute',
-//       'top': '0'
-//     });
+    $('#sidebar').css({
+      'position': 'absolute',
+      'top': '0'
+    });
 
-//   }
-// };
+  }
+};
 
 const handleSidebar = () => {
 
@@ -284,7 +284,7 @@ const handleDropdownNavigation = (event) => {
 
 (function($) {
   
-  // $(window).on('resize', handleResize);
+  $(window).on('resize', handleResize);
   $(window).on('scroll', handleSidebar);
   $(window).on('scroll', handleSidebarHighlight);
   $(window).on('scroll', handleHeader);
